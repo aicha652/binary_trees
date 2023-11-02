@@ -33,11 +33,8 @@ size_t left_height = 0, right_height = 0;
 if (tree == NULL)
 	return (0);
 
-if (tree->left)
-	left_height = 1 + binary_tree_height(tree->left);
-
-if (tree->right)
-	right_height = 1 + binary_tree_height(tree->right);
+left_height = 1 + binary_tree_height(tree->left);
+right_height = 1 + binary_tree_height(tree->right);
 
 if (left_height > right_height)
 	return (left_height);
